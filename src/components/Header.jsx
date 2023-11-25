@@ -65,7 +65,7 @@ const Header = ({ openModal }) => {
   });
 
   return (
-    <div className="w-full fixed bg-slate-200 text-black dark:bg-slate-950 dark:text-white">
+    <div className="w-full top-0 fixed bg-slate-200 text-black dark:bg-slate-950 dark:text-white">
       <div className="flex justify-between mx-auto w-[90%] px-2 py-3">
         <div className="flex items-center">
           <img
