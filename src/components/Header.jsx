@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 
-const Header = ({ openModal }) => {
+const Header = ({ openSearchBar, setOpenSeachBar }) => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "system"
   );
@@ -65,7 +65,7 @@ const Header = ({ openModal }) => {
   });
 
   return (
-    <div className="w-full fixed bg-slate-200 text-black dark:bg-slate-950 dark:text-white">
+    <div className="w-full z-10 fixed top-0 bg-slate-200 text-black dark:bg-slate-950 dark:text-white">
       <div className="flex justify-between mx-auto w-[90%] px-2 py-3">
         <div className="flex items-center">
           <img
@@ -92,7 +92,7 @@ const Header = ({ openModal }) => {
             </button>
           ))}
           <button
-            onClick={openModal}
+            onClick={() => setOpenSeachBar(!openSearchBar)}
             className="w-8 h-8 leading-9 text-xl rounded-full m-1"
           >
             <ion-icon name="search"></ion-icon>

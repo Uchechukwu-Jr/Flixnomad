@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
-export const SearchBar = ({ closeModal }) => {
+export const SearchBar = ({ setOpenSeachBar, openSearchBar }) => {
+  const closeModal = () => {
+    setOpenSeachBar(!openSearchBar);
+  };
   const handleClickInsideModal = (e) => {
     e.stopPropagation();
   };
@@ -15,7 +18,7 @@ export const SearchBar = ({ closeModal }) => {
     >
       <div
         onClick={handleClickInsideModal}
-        className=" bg-slate-200 text-black dark:bg-slate-950 dark:text-white shadow-[0_4px_8px_0_rgba(0,0,0,0.2)] rounded-xl relative m-auto p-20 border border-solid border-[#888] w-[80%]"
+        className=" bg-slate-200 text-black dark:bg-slate-950 dark:text-white shadow-[0_4px_8px_0_rgba(0,0,0,0.2)] rounded-xl relative m-auto p-20 border border-solid border-[#888] w-full md:w-[80%]"
       >
         <span
           onClick={closeModal}
