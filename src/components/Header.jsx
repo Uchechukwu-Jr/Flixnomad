@@ -83,6 +83,7 @@ const Header = ({ openSearchBar, setOpenSeachBar }) => {
           {options?.map((opt) => (
             <button
               key={opt.text}
+              title={opt.text}
               onClick={() => setTheme(opt.text)}
               className={`w-8 h-8 leading-9 text-xl rounded-full m-1 ${
                 theme === opt.text && "text-sky-600"
@@ -92,6 +93,7 @@ const Header = ({ openSearchBar, setOpenSeachBar }) => {
             </button>
           ))}
           <button
+            title="Search"
             onClick={() => setOpenSeachBar(!openSearchBar)}
             className="w-8 h-8 leading-9 text-xl rounded-full m-1"
           >
